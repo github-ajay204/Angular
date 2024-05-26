@@ -1,0 +1,24 @@
+<form [formGroup]="EmployeeForm" (ngSubmit)="OnSubmit()">
+    <h2>Member Registration</h2>
+    <label>
+      Name:
+      <input type="text" formControlName="Name">
+    </label>
+    <label>
+      Designation:
+      <input type="text" formControlName="Designation">
+    </label>
+    <br>
+    <h2>Employee Address</h2>
+    <div formGroupName="Address">
+      <label>
+        Country:
+        <input type="text" formControlName="Country">
+      </label>
+      <label>
+        City:
+        <input type="text" formControlName="city">
+      </label>
+    </div>
+    <button type="submit">Submit</button>
+  </form>

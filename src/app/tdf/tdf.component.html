@@ -1,0 +1,51 @@
+<!-- {{diagnostic}}
+<br> -->
+
+<!-- <div *ngIf="data">
+    <pre>{{ data | json }}</pre>
+  </div>
+<br> -->
+
+<div class="container">
+    <h1>Employee Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="designation">Designation</label>
+        <input type="text" class="form-control" id="designation" [(ngModel)]="model.Designation" name="Designation" required>
+      </div>
+      <div class="form-group">
+        <label for="skills">Skills</label>
+        <select class="form-control" id="skills" [(ngModel)]="model.skills" name="skills" required>
+          <option *ngFor="let ski of skills" [value]="ski">{{ ski }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success" (click)="Onsubmit()">Submit</button>
+    </form>
+  </div>
+  
+
+
+<!-- <div class="container">
+    <h1>Employee Form</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="designation">Designation</label>
+            <input type="text" class="form-control" id="designation" [(ngModel)]="model.Designation" name="Designation" required>
+        </div>
+        <div class="form-group">
+            <label for="skills">Skills</label>
+            <select class="form-control" id="skills" [(ngModel)]="model.skills" name="skills" required>
+                <option *ngFor="let ski of skills" [value]="ski">{{ ski }}</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success"  (click)="Onsubmit();">Submit</button>
+    </form>
+</div> -->
