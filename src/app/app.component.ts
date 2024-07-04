@@ -39,7 +39,7 @@ export class AppComponent {
   Message:string="";
   
   ngOnInit():void {
-this.Message=this.nsService.getMsg();
+//this.Message=this.nsService.getMsg();
   }
 
   onSelect(fruit:Fruit):void{

@@ -16,6 +16,15 @@ import { TdfComponent } from './tdf/tdf.component';//added by ajay for 1
 import { HttpClientModule } from '@angular/common/http';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { EmpployeeComponent } from './empployee/empployee.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
 
 const  appRoutes:Routes =[
   {path :'demo',component:DemoComponent},
@@ -35,7 +44,14 @@ const  appRoutes:Routes =[
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatInputModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatTableModule
     // ,
     // 
     // RouterModule.forRoot(
@@ -48,7 +64,8 @@ const  appRoutes:Routes =[
     provideClientHydration(),
     provideAnimationsAsync(),
     NsService,
-    provideHttpClient(withFetch())
+    provideHttpClient(withFetch()),
+    {provide: 'NODE_TLS_REJECT_UNAUTHORIZED', useValue: '0' }
   ],
   bootstrap: [AppComponent]
 })
